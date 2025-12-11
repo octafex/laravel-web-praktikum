@@ -1,0 +1,322 @@
+/* ========== Reset & Base ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+/* ========== Navbar ========= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #e1e5eb;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar .logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background: #f1f3f5;
+}
+
+.navbar .nav-links form {
+    display: inline;
+}
+
+.navbar .nav-links button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.navbar .nav-links button:hover {
+    background: #333;
+}
+
+/* ========== Container ========= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* ========== Page Header ========= */
+.page-header {
+    background: #fff;
+    padding: 25px 30px;
+    border-bottom: 1px solid #e1e5eb;
+    text-align: center;
+}
+
+.page-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+}
+
+/* ========== Content ========= */
+.content {
+    padding: 30px;
+}
+
+/* ========== Buttons ========= */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-blue {
+    background: #000;
+    color: white;
+}
+
+.btn-yellow {
+    background: #ffc107;
+    color: black;
+}
+
+.btn-red {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-link {
+    background: transparent;
+    color: #000;
+    text-decoration: underline;
+    padding: 8px 0;
+    font-weight: 500;
+}
+
+.btn-link:hover {
+    background: transparent;
+    color: #333;
+    text-decoration: underline;
+}
+
+/* ========== Table Actions ========= */
+.action-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 2px; 
+    display: inline-block;
+    transition: all 0.3s ease;
+    width: 80px; /* ← tambahkan ini! */
+    text-align: center; /* ← biar teks rata tengah */
+}
+
+.action-btn.edit {
+    background: #ffc107;
+    color: black;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
+.action-btn.delete {
+    background: #dc3545;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
+.action-btn.edit:hover {
+    background: #e0a800;
+}
+
+.action-btn.delete:hover {
+    background: #b52a36;
+}
+
+/* ========== Table ========= */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+table th {
+    background: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+    padding: 16px 12px;
+    text-align: left;
+}
+
+table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover {
+    background: #f1f3f5;
+}
+
+/* ========== Form Elements ========= */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ========== Card ========= */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ========== Footer ========= */
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* ========== Responsive ========= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .navbar .nav-links {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .page-header {
+        padding: 20px;
+    }
+}
