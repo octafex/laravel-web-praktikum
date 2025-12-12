@@ -57,7 +57,10 @@ class StokController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $stok = Stok::with('product', 'toko')->findOrFail($id);
+        $products = Product::all();
+        $tokos = Toko::all();
+        return view('stok.edit', compact('stok', 'products', 'tokos'));
     }
 
     /**
@@ -65,7 +68,16 @@ class StokController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'product_id' => 'required|exists:products,id',
+            'toko_id'    => 'required|exists:toko,id',
+            'jumlah'     => 'required|integer|min:0',
+        ]);
+
+        $stok = Stok::findOrFail($id);
+        $stok->update($request->only(['product_id', 'toko_id', 'jumlah']));
+
+        return redirect('/stok')->with('success', 'Stok berhasil diupdate!');
     }
 
     /**

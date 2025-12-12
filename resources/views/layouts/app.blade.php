@@ -10,7 +10,7 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-    <a href="/dashboard" class="logo">📌 Dashboard</a>
+    <a href="/dashboard" class="logo">OctaFlex</a>
     <div class="nav-links">
         <a href="/products" class="btn btn-link">Produk</a>
         <a href="/toko" class="btn btn-link">Toko</a>

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'Dashboard')
-@section('page-title', '🏠 Dashboard')
+@section('page-title', 'OctaFlex')
 
 @section('content')
 <div class="card">
-    <h3 style="text-align: center; color: #000; margin-bottom: 20px;">🎉 Selamat Datang di Dashboard</h3>
+    <h3 style="text-align: center; color: #000; margin-bottom: 20px;">🎉 Selamat Datang di OctaFlex Dashboard</h3>
     <p style="text-align: center; font-size: 1.1rem; color: #555;">
         Halo, <strong>{{ auth()->user()->name ?? 'User' }}</strong>!
     </p>

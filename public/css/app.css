@@ -165,30 +165,30 @@ body {
     margin: 0 2px; 
     display: inline-block;
     transition: all 0.3s ease;
-    width: 80px; /* ← tambahkan ini! */
+    min-width: 60px; /* ← tambahkan ini! */
     text-align: center; /* ← biar teks rata tengah */
 }
 
 .action-btn.edit {
     background: #ffc107;
     color: black;
-    padding: 6px 12px;
-    font-size: 0.85rem;
+    border: 1px solid #e0a800;
 }
 
 .action-btn.delete {
     background: #dc3545;
     color: white;
-    padding: 6px 12px;
-    font-size: 0.85rem;
+    border: 1px solid #b52a36;
 }
 
 .action-btn.edit:hover {
     background: #e0a800;
+    border-color: #d39e00;
 }
 
 .action-btn.delete:hover {
     background: #b52a36;
+    border-color: #a3242f;
 }
 
 /* ========== Table ========= */

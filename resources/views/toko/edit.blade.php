@@ -1,41 +1,33 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Produk</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
+@extends('layouts.app')
 
-<div class="navbar">
-    <div><strong>Edit Produk</strong></div>
-    <div>
-        <a href="/products">Kembali</a>
-        <a href="/logout">Logout</a>
+@section('title', 'Edit Toko')
+@section('page-title', '✏️ Edit Toko')
+
+@section('content')
+
+    <div class="content">
+        <form action="{{ route('toko.update', $toko->id) }}" method="POST" class="space-y-4">
+            @csrf
+            @method('PUT')
+
+            <div class="form-group">
+                <label>Nama Toko</label>
+                <input type="text" name="nama_toko" value="{{ $toko->nama_toko }}" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div class="form-group">
+                <label>Alamat</label>
+                <input type="text" name="alamat" value="{{ $toko->alamat }}" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div class="pt-4">
+                <button type="submit" class="btn btn-blue w-full">Update Toko</button>
+            </div>
+        </form>
+
+        <div class="mt-4">
+            <a href="{{ route('toko.index') }}" class="btn btn-link">← Kembali ke Daftar Toko</a>
+        </div>
     </div>
 </div>
-
-<div class="container">
-    <h2>✏️ Edit Produk</h2>
-
-    <form action="{{ route('products.update', $product->id) }}" method="POST">
-        @csrf
-        @method('PUT')
-
-        <label>Nama Produk</label>
-        <input type="text" name="name" value="{{ $product->name }}" required>
-
-        <label>Harga Produk</label>
-        <input type="number" name="price" value="{{ $product->price }}" required>
-
-        <label>Deskripsi</label>
-        <textarea name="description" rows="4" required>{{ $product->description }}</textarea>
-
-        <button type="submit">Update Produk</button>
-    </form>
-
-    <a href="{{ route('products.index') }}" class="back-btn">← Kembali ke Daftar Produk</a>
-</div>
-
-</body>
-</html>
+@endsection

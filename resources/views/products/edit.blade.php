@@ -5,9 +5,6 @@
 
 @section('content')
 <div class="card">
-    <div class="page-header">
-        <h2>✏️ Edit Produk</h2>
-    </div>
 
     <div class="content">
         <form action="{{ route('products.update', $product->id) }}" method="POST" class="space-y-4">
