@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://laravel.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="380" alt="Laravel Logo">
   </a>
 </p>
 
@@ -11,22 +11,41 @@
   <img src="https://img.shields.io/packagist/l/laravel/framework" alt="License">
 </p>
 
----
-
-## 📚 About Laravel Web Praktikum
-
-**laravel-web-praktikum** adalah aplikasi web sederhana berbasis **Laravel** yang dibuat untuk memenuhi tugas praktikum Pemrograman Web. Aplikasi ini menyediakan fitur-fitur dasar seperti:
-
-- 🔐 **Login & Register** (Autentikasi)
-- 📦 **CRUD Produk**
-- 🏪 **CRUD Toko**
-- 📦 **CRUD Stok**
-- 🎨 **UI sederhana dengan layout konsisten**
+<p align="center">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmtrc2Zpa281ZWU2N3F3eDZwZTFoMGhtcnRjdHAzbHFhODY0YThnbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aNqEFrYVnsS52/giphy.gif" width="350">
+</p>
 
 ---
 
-## 🧪 Cara Testing
+# 📚 Laravel Web Praktikum – Produk, Toko & Stok
 
-1. Pastikan kamu sudah menjalankan server Laravel:
-   ```bash
-   php artisan serve
+Aplikasi ini dibuat untuk memenuhi tugas praktikum Pemrograman Web Semester 5 dengan implementasi autentikasi, relasi tabel, dan operasi CRUD lengkap. Sistem dilengkapi tampilan sederhana dan alur yang mudah diuji.
+
+---
+
+# 🚀 Fitur Utama
+
+### 🔐 Autentikasi
+- Register akun baru  
+- Login  
+- Logout  
+- Proteksi halaman menggunakan **middleware auth**
+
+### 📦 CRUD Produk  
+### 🏪 CRUD Toko  
+### 📊 CRUD Stok  
+Semua fitur hanya dapat diakses **setelah login** dan masuk ke **/dashboard**.
+
+### 🎨 UI & Styling
+- Navbar, layout container, footer
+- CSS di `public/css/app.css`
+- Tombol sudah diberi styling
+
+---
+
+# 🧪 Cara Menjalankan Aplikasi
+
+## 1. Clone Repository
+```bash
+git clone <url-repositori-kamu>
+cd <nama-folder>
